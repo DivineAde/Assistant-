@@ -4,13 +4,13 @@
 import React, { useState } from 'react';
 
 export default function Country() {
-  const [hoveredCountry, setHoveredCountry] = useState(null);
+  const [hoveredCountry, setHoveredCountry] = useState<string | null>(null);
 
-  const handleHover = (countryName) => {
+  const handleHover = (countryName: string) => {
     setHoveredCountry(countryName);
   };
 
-  const getTimeByCountry = (countryName) => {
+  const getTimeByCountry = (countryName: string) => {
     // You can implement logic here to fetch and display the time for each country
     // For simplicity, let's just return a static time for each country
     switch (countryName) {
@@ -66,4 +66,4 @@ export default function Country() {
       </p>
     </div>
   );
-}
+      }
