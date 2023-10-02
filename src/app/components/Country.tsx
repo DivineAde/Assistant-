@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 export default function Country() {
   const [hoveredCountry, setHoveredCountry] = useState<string | null>(null);
 
-  const handleHover = (countryName: string) => {
+  const handleHover = (countryName: string | null) => {
     setHoveredCountry(countryName);
   };
 
@@ -66,4 +66,4 @@ export default function Country() {
       </p>
     </div>
   );
-      }
+          }
